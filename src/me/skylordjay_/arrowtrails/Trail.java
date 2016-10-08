@@ -37,14 +37,6 @@ public class Trail {
 			}
 		}
 	}
-
-//	private void particle(Location loc) {
-//		PacketPlayOutWorldParticles packet = new PacketPlayOutWorldParticles(e, true, (float) loc.getX(),
-//				(float) loc.getY(), (float) loc.getZ(), 0, 0, 0, 0, 15, null);
-//		for (Player p : Bukkit.getOnlinePlayers()) {
-//			((CraftPlayer) p).getHandle().playerConnection.sendPacket(packet);
-//		}
-//	}
 	
 	private void particle(Location loc){
 		e.display(0, 0, 0, 0, 15,loc, 256);
