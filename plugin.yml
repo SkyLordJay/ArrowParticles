@@ -1,0 +1,6 @@
+name: ArrowTrails
+version: 2.0
+main: me.skylordjay_.arrowtrails.ArrowTrails
+commands:
+  trail:
+    description: Fire arrows trails!

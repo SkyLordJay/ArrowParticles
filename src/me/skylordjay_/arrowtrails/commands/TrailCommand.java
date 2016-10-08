@@ -7,7 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import me.skylordjay_.arrowtrails.ArrowTrails;
-import net.minecraft.server.v1_8_R3.EnumParticle;
+import me.skylordjay_.arrowtrails.particles.ParticleEffect;
 
 /**
  * 
@@ -37,7 +37,7 @@ public class TrailCommand implements CommandExecutor {
 					return true;
 				}
 				try {
-					EnumParticle e = EnumParticle.valueOf(args[0].toUpperCase());
+					ParticleEffect e = ParticleEffect.valueOf(args[0].toUpperCase());
 					ArrowTrails.getArrowTrails().addTrail(p, e);
 					p.sendMessage(ChatColor.GREEN + "Arrow Trail set.");
 				} catch (Exception e) {
@@ -55,7 +55,7 @@ public class TrailCommand implements CommandExecutor {
 	
 	public void list(Player p) {
 		String text = "";
-		for (EnumParticle pa : EnumParticle.values()) {
+		for (ParticleEffect pa : ParticleEffect.values()) {
 			if (text.equals("")) {
 				text = pa.name();
 			} else {

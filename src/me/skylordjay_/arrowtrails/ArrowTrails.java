@@ -14,7 +14,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 import me.skylordjay_.arrowtrails.commands.TrailCommand;
 import me.skylordjay_.arrowtrails.listeners.ArrowShoot;
 import me.skylordjay_.arrowtrails.listeners.PlayerQuit;
-import net.minecraft.server.v1_8_R3.EnumParticle;
+import me.skylordjay_.arrowtrails.particles.ParticleEffect;
 
 /**
  * 
@@ -62,7 +62,7 @@ public class ArrowTrails extends JavaPlugin {
 		}
 	}
 
-	public void addTrail(Player p, EnumParticle e) {
+	public void addTrail(Player p, ParticleEffect e) {
 		players.put(p.getUniqueId(), new Trail(e));
 	}
 
